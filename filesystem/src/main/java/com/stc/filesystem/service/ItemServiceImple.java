@@ -96,7 +96,6 @@ public class ItemServiceImple implements ItemService {
 			if (value) {
 				Files.write(file.toPath(), dataForWriting.getBytes());
 				bytes = Files.readAllBytes(file.toPath());
-
 				return bytes;
 			}
 		} catch (IOException e) {

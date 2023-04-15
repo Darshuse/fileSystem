@@ -37,7 +37,7 @@ public class FileItemController {
 	public void getSteamingFile(@PathVariable int id, HttpServletResponse response) throws IOException {
 		FileItem fileItem = service.findById(id);
 
-		String fullPath = path + fileItem.getItem().getItemName() + ".pdf";
+		String fullPath = path + fileItem.getItem().getItemName();
 		File file = new File(fullPath);
 
 		response.setContentType("application/pdf");
